@@ -1,6 +1,4 @@
-portaudio-playground
-====================
-
-### Using
-- [dirkarnez/portaudio-prebuilt](https://github.com/dirkarnez/portaudio-prebuilt)
-
+matlab-codegen-playground
+=========================
+### Notes
+- `"tmwtypes.h"` is in matlab program directory, it can be ignored
