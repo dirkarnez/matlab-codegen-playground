@@ -31,9 +31,11 @@
 /*************************************************************************/
 
 // Include Files
+#include <stdio.h>
+
 #include "main.h"
-#include "myadd.h"
-#include "myadd_terminate.h"
+#include "myadd/myadd.h"
+#include "myadd/myadd_terminate.h"
 
 // Function Declarations
 static void argInit_1x4_real_T(double result[4]);
@@ -79,6 +81,20 @@ int main(int, char **)
   // Terminate the application.
   // You do not need to do this more than one time.
   myadd_terminate();
+  double input[] = {1.0, 2.0, 3.0, 4.0};
+  double kernel[] = {4.0, 5.0, 6.0, 7.0};
+
+  double data[7] = {0};
+  
+  myadd(input, kernel, data);
+  
+  // 4 13 28 50 52 45 28 
+  // Print the output
+  for (int i = 0; i < 7; i++) {
+    printf("Output[%d] = %.2f\n", i, data[i]);
+  }
+
+
   return 0;
 }
 
